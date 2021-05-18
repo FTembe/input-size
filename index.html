@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Francisco Tembe | input size</title>
+	 <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+	width    :<input type="range" name="location" id="width" min="0" max="1000" value="0" ><br>
+	height   :<input type="range" name="location" id="height" min="0" max="1000" value="0" ><br>
+	Radius   :<input type="range" name="location" id="radius" min="0" max="1000" value="0" ><br>
+	Font-size:<input type="range" name="location" id="radius" min="0" max="1000" value="0" ><br>
+
+	<table border="2">
+		<tr>
+			<td>width</td>
+			<td>height</td>
+			<td>Radius</td>
+		</tr>
+		<tr>
+			<td class="width">0</td>
+			<td class="height">0</td>
+			<td class="radius">0</td>
+		</tr>
+	</table>
+	<br><br>
+	<input type="text" name="" value="asas" ><br>
+
+	
+
+</body>
+</html>
+<script type="text/javascript">
+	const input  = document.querySelector('input[type=text]');
+	const x		 = document.querySelector('#width');
+	const y		 = document.querySelector('#height');
+	const radius = document.querySelector('#radius');
+
+
+
+	x.addEventListener('change',(e)=>{
+		input.style.width=e.target.value+'px'
+		document.querySelector('.width').innerText = e.target.value;
+	})
+
+	y.addEventListener('change',(e)=>{
+		input.style.setProperty('height', e.target.value+'px');
+		document.querySelector('.height').innerText = e.target.value;
+	})
+
+	radius.addEventListener('change',(e)=>{
+		input.style.setProperty('border-radius', e.target.value+'px');
+		document.querySelector('.radius').innerText = e.target.value;
+	})
+
+</script>
